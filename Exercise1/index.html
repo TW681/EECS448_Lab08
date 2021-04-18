@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    EECS 448 Lab08
+  </head>
+  <body>
+    <h1>
+      Exercise 1
+    </h1>
+    <input type="text" id = "password1" value="">
+    <input type="text" id = "password2" value="">
+    <button type="button" id = "button1" onclick="buttonClick()" >Validate</button>
+    <script>
+      function buttonClick()
+      {
+        var firstPass = document.getElementById('password1').value;
+        var secondPass = document.getElementById('password2').value;
+        if(firstPass.length >= 8 && secondPass.length >=8)
+        {
+          if(firstPass == secondPass)
+          {
+            document.getElementById('answer').innerHTML = "The passwords match!\n";
+          }
+          else if( firstPass!=secondPass)
+          {
+            document.getElementById('answer').innerHTML = "The passwords do not match!\n";
+          }
+        }
+        else
+        {
+          document.getElementById('answer').innerHTML = "The passwords are less than 8 characters!\n";
+        }
+      }
+    </script>
+    <p id = "answer">
+
+    </p>
+  </body>
+</html>

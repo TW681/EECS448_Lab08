@@ -1,0 +1,47 @@
+body
+{
+  background-image: url(gifBackground.gif); background-size: 100%;
+  /*background-color: grey;*/
+}
+
+.profile
+{
+  display: table-cell;
+}
+.profile img
+{
+background-color: black;
+
+float:left;
+}
+
+.icon
+{
+
+  background-color: black;
+    color: white;
+    padding: 15px;
+    width: 75px;
+    height: 35px;
+    position: relative;
+    top: 40px;
+    border-style: double;
+
+
+}
+
+div.text
+{
+    background-color: white;
+    border-style: groove;
+    width: 500px;
+    height: 200px
+
+
+}
+
+
+div.links:hover, div.links:active
+{
+  font-size: 150%
+}

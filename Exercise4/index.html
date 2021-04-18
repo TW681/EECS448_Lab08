@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link href="style.css"rel="stylesheet"type="text/css"/>
+    <title>EECS 448 Lab08</title>
+  </head>
+  <body>
+    <br>
+    <p id = "dummy" style = "border: 3px; border-style: solid; border-color: black; width: 150px;">Here is some dummy filler text</p>
+    <br>
+
+
+
+    <div>
+      Border Color (e.g. red, green, blue):
+      <input type="text" id = "borderColor" value=""> <br>
+      Border Width (e.g. 0-500):
+      <input type="text" id="borderWidth" value=""> <br>
+      Background Color (e.g. red, green, blue):
+      <input type="text" id = "backgroundColor" value="">
+      <button type="button" name="colorChange"onclick="changeColor()">Change the Colors</button>
+      <script>
+        function changeColor()
+        {
+          var borderC = document.getElementById("borderColor");
+          var borderW = document.getElementById("borderWidth");
+          var backgroundC = document.getElementById("backgroundColor");
+          if(borderC.value == "red" || borderC.value == "Red")
+          {
+            console.log("test1");
+            dummy.style.borderColor = "red";
+          }
+          else if(borderC.value == "green" || borderC.value == "Green")
+          {
+            dummy.style.borderColor = "green";
+          }
+          else if(borderC.value == "blue" || borderC.value == "Blue")
+          {
+            dummy.style.borderColor = "blue";
+          }
+          else
+          {
+            alert("Color input for border is invalid!")
+          }
+
+
+          if(parseInt(borderW.value) >= 0 && parseInt(borderW.value) <= 500)
+          {
+            dummy.style.width = borderW.value + "px";
+          }
+          else
+          {
+            console.log(borderW.value);
+            alert("Border width entered is invalid!")
+          }
+          
+
+          if(backgroundC.value == "red" || backgroundC.value == "Red")
+          {
+            dummy.style.backgroundColor = "red";
+          }
+          else if(backgroundC.value == "green" || backgroundC.value == "Green")
+          {
+            backgroundC.style.backgroundColor = "green";
+          }
+          else if(backgroundC.value == "blue" || backgroundC.value == "Blue")
+          {
+            dummy.style.backgroundColor = "blue";
+          }
+          else
+          {
+            alert("Color input for border is invalid!")
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

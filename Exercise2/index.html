@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>EECS 448 Lab08</title>
+  </head>
+  <body>
+    <h1>Exercise 2</h1>
+    <p id = "picNum">
+      Picture 1 <br>
+    </p>
+    <img id = "Image" src="image1.jpg" height = "250" width= "300">
+    <br>
+    <button type="button" name="backButton" onclick="previousImage()">Previous</button>
+    <button type="button" name="nextButton" onclick="nextImage()">Next</button>
+    <script>
+      var imgCount = 1;
+      image =  document.getElementById("Image");
+      textbox = document.getElementById("picNum");
+      function nextImage()
+      {
+        if (imgCount==1)
+        {
+            image.src = "image2.jpg";
+            imgCount++;
+        }
+        else if(imgCount==2)
+        {
+          image.src = "image3.jpg";
+          imgCount++;
+        }
+        else if(imgCount==3)
+        {
+          image.src = "image1.jpg";
+          imgCount = 1;
+        }
+        textbox.innerHTML = "Picture " + imgCount + "\n";
+      }
+      function previousImage()
+      {
+        if (imgCount==1)
+        {
+            image.src = "image3.jpg";
+            imgCount = 3;
+        }
+        else if(imgCount==2)
+        {
+          image.src = "image1.jpg";
+          imgCount--;
+        }
+        else if(imgCount==3)
+        {
+          image.src = "image2.jpg";
+          imgCount = 2;
+        }
+        textbox.innerHTML = "Picture " + imgCount + "\n";
+      }
+    </script>
+  </body>
+</html>
